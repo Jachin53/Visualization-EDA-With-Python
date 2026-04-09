@@ -4,7 +4,7 @@
 This project is part of my **Python learning journey** where I explore **Exploratory Data Analysis (EDA)** and **data visualization**. I'm building this to understand how data tells stories through visualizations and statistical summaries. The goal is to move from knowing Python syntax to actually analyzing real-world datasets like a data analyst.
 
 ## 👋 About This Project (Learning Context)
-> *"I'm currently learning Python and this is my hands-on EDA project."*
+> *"I'm currently learning Python."*
 
 This repository documents what I've learned about:
 - Loading and inspecting datasets using **Pandas**
