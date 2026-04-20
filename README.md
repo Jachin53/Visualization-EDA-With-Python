@@ -21,13 +21,12 @@ Every notebook and script here reflects my growing understanding of data analysi
 ### 1. Data Cleaning & Preprocessing
 - Handling missing values (`.isnull()`, `.dropna()`, `.fillna()`)
 - Removing duplicates
-- Detecting and treating outliers (IQR method, Z-score)
 - Renaming columns and fixing data types
 
 ### 2. Exploratory Data Analysis (EDA)
 - **Univariate analysis**: Histograms, box plots, bar charts for single variables
 - **Bivariate analysis**: Scatter plots, grouped bar charts, correlation analysis
-- **Multivariate analysis**: Pair plots, heatmaps, facet grids
+- **Multivariate analysis**: Pair plots
 
 ### 3. Visualizations on Databricks
 | Visualization | Purpose | Libraries Used |
@@ -49,9 +48,9 @@ Every notebook and script here reflects my growing understanding of data analysi
 | Friday | 1.34K | 🔥 Peak |
 | Saturday | 1.33K | 🔥 Peak |
 | Wednesday | 1.31K | 🔥 Peak |
-| Sunday | ~1.2K | Moderate |
-| Tuesday | ~1.15K | Moderate |
-| Thursday | ~1.1K | Moderate |
+| Sunday | 1.2K | Moderate |
+| Tuesday | 1.15K | Moderate |
+| Thursday | 1.1K | Moderate |
 | Monday | 824 | ⚠️ Low |
 
 **Key Takeaways:**
@@ -133,9 +132,9 @@ Every notebook and script here reflects my growing understanding of data analysi
 | Handle | Views | Tier |
 |--------|-------|------|
 | @Remi_d39 | 211 | 🏆 Top Performer |
-| @valerio25 | ~190 | 📊 Mid-Tier |
-| @Luca23 | ~185 | 📊 Mid-Tier |
-| @charlie36 | ~180 | 📊 Mid-Tier |
+| @valerio25 | 190 | 📊 Mid-Tier |
+| @Luca23 | 185 | 📊 Mid-Tier |
+| @charlie36 | 180 | 📊 Mid-Tier |
 | Unknown | 196 | ⚠️ Unidentified |
 
 **Key Takeaways:**
@@ -220,6 +219,4 @@ Every notebook and script here reflects my growing understanding of data analysi
 | **Matplotlib** | Basic plotting & visualization |
 | **Seaborn** | Statistical visualizations |
 
----
 
-## 📁 Repository Structure
