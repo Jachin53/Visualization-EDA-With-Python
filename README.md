@@ -1,7 +1,7 @@
 # Visualization-EDA-With-Python
 
 ## 📌 Overview
-This project is part of my **Python learning journey** where I explore **Exploratory Data Analysis (EDA)** and **data visualization**. I'm building this to understand how data tells stories through visualizations and statistical summaries. The goal is to move from knowing Python syntax to actually analyzing real-world datasets like a data analyst.
+This project is part of my **Python learning journey** where I explore **Exploratory Data Analysis (EDA)** and **data visualization**. I'm building this to understand how data tells stories through visualizations and statistical summaries. The goal is to move from knowing Python syntax to analyzing real-world data as a data analyst.
 
 ## 👋 About This Project (Learning Context)
 > *"I'm currently learning Python."*
