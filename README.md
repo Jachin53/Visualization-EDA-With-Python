@@ -40,12 +40,7 @@ Every notebook and script here reflects my growing understanding of data analysi
 ## 🛠️ Technologies & Libraries Used
 -- **Databricks**
 - **Python 3.x** – Core language (still learning!)
-- **Pandas** – Data manipulation (my current focus)
+- **Pandas** – Data manipulation 
 - **NumPy** – Numerical operations
 - **Matplotlib** – Basic plotting
 - **Seaborn** – Statistical visualizations (more beautiful plots)
-
-
-> 💡 *I'm still exploring Plotly for interactive plots - will add soon!*
-
-## 📁 Repository Structure
