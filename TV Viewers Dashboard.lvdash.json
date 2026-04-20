@@ -1,0 +1,1607 @@
+{
+  "datasets": [
+    {
+      "name": "0bae0491",
+      "displayName": "case_study_python_tv_viewership",
+      "queryLines": [
+        "SELECT * FROM workspace.default.case_study_python_tv_viewership"
+      ]
+    },
+    {
+      "name": "73efae56",
+      "displayName": "case_study_python_tv_eda_2",
+      "queryLines": [
+        "SELECT * FROM workspace.default.case_study_python_tv_eda_2"
+      ]
+    },
+    {
+      "name": "c1acf38e",
+      "displayName": "case_study_python_tv_eda_2",
+      "queryLines": [
+        "SELECT * FROM workspace.default.case_study_python_tv_eda_2"
+      ]
+    },
+    {
+      "name": "b9ae2a20",
+      "displayName": "case_study_python_tv_eda_2",
+      "queryLines": [
+        "SELECT * FROM workspace.default.case_study_python_tv_eda_2"
+      ]
+    },
+    {
+      "name": "67749d84",
+      "displayName": "case_study_python_tv_eda_2",
+      "queryLines": [
+        "SELECT * FROM workspace.default.case_study_python_tv_eda_2"
+      ]
+    },
+    {
+      "name": "b8edc213",
+      "displayName": "case_study_python_tv_eda_2",
+      "queryLines": [
+        "SELECT * FROM workspace.default.case_study_python_tv_eda_2"
+      ]
+    },
+    {
+      "name": "5fae0eb7",
+      "displayName": "case_study_python_tv_eda_2",
+      "queryLines": [
+        "SELECT * FROM workspace.default.case_study_python_tv_eda_2"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "84ed0f83",
+      "displayName": "WEEKLY,MONTHLY AND TIME BASED ANALYSIS",
+      "layout": [
+        {
+          "widget": {
+            "name": "afc2bb6f",
+            "multilineTextboxSpec": {
+              "lines": [
+                "# <span style=\"text-align:center;display:block\"><span style=\"font-size: 24px;\">**BRIGHT TV VIEWERSHIP**</span></span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "views-per-week-day",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Day",
+                      "expression": "`Day`"
+                    },
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "VIEWS PER WEEK DAY",
+                "headerAlignment": "center"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "Day",
+                  "displayName": "WEEK DAYS",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "count(*)",
+                  "displayName": "VIEWS",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 5,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "views-per-month",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Month",
+                      "expression": "`Month`"
+                    },
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "VIEWS PER MONTH",
+                "headerAlignment": "center"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "Month",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "count(*)",
+                  "displayName": "VIEWS",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 5,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "c0db76d6",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "count(*)",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "max",
+                      "places": 2
+                    }
+                  },
+                  "style": {
+                    "bold": true
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 1,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "views-per-hour",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Hour_of_the_Day",
+                      "expression": "`Hour_of_the_Day`"
+                    },
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "VIEWS PER HOUR",
+                "headerAlignment": "center"
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "Hour_of_the_Day",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "count(*)",
+                  "displayName": "VIEWS",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 3,
+            "width": 7,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "quarter",
+            "queries": [
+              {
+                "name": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Quarter",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Quarter",
+                      "expression": "`Quarter`"
+                    },
+                    {
+                      "name": "Quarter_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "QUARTER"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Quarter",
+                    "queryName": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Quarter"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 2,
+            "width": 4,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "province",
+            "queries": [
+              {
+                "name": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Province",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Province",
+                      "expression": "`Province`"
+                    },
+                    {
+                      "name": "Province_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "PROVINCE"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Province",
+                    "queryName": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Province"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 1,
+            "width": 4,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "4972f2f4",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**📊 Weekly TRENDS**</span></span>\n",
+                "\n",
+                "<br><span style=\"color:#00A972;font-size:18px\">Peak Days:</span><span style=\"font-size:18px\"> Friday (1.34K), Saturday (1.33K), and Wednesday (1.31K) are the strongest performers. This suggests that mid-week and weekend slots are prime for high-impact programming or advertising.</span><br><span style=\"color:#FF3621;font-size:18px\">Low Days:</span><span style=\"font-size:18px\"> Monday (824) is the weakest, which aligns with typical audience fatigue after the weekend. This could be an opportunity to test lighter, engaging content to boost early-week retention.</span><br><span style=\"color:#FFAB00;font-size:18px\">Balanced Mid-Range:</span><span style=\"font-size:18px\"> Sunday, Tuesday, and Thursday hover around 1.1K-1.2K, indicating relatively stable yet moderate engagement.</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**📅 Monthly Trends**</span>\n",
+                "\n",
+                "<br><span style=\"color:#00A972;font-size:18px\">Strongest Month:</span><span style=\"font-size:18px\"> March dominates with 3.99K views, nearly double January (1.83K). This spike could be seasonal (e.g., school holidays, special events, or new show launches).</span><br><span style=\"color:#FFAB00;font-size:18px\">Consistent Growth: </span><span style=\"font-size:18px\">February (2.49K) shows a steady climb from January, indicating momentum building into March.</span><br><span style=\"color:#FF3621;font-size:18px\">Weak Month: </span><span style=\"font-size:18px\">April shows negligible activity (possibly due to incomplete data or a seasonal drop-off).</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size:18px\">**Actionable Insight**</span></span>\n",
+                "\n",
+                "<br><span style=\"font-size:18px\">Prioritize premium shows, launches, or ad campaigns on Friday, Saturday, and Wednesday. Consider experimenting with fresh formats on Mondays to lift engagement.</span>\n",
+                "\n",
+                "<br><span style=\"font-size:18px\">**Advertising Strategy:**</span><span style=\"font-size:18px\"> Sell premium ad slots on peak days and months. Offer discounted packages during weaker periods to attract advertisers and fill inventory.</span>\n",
+                "\n",
+                "<br><span style=\"font-size:18px\">**Audience Engagement:**</span><span style=\"font-size:18px\"> We need to use Monday and April as testing grounds for experimental formats, interactive shows, or digital-first campaigns to lift underperforming slots.</span>\n",
+                "\n",
+                "<br><span style=\"font-size:18px\">**Executive approach:**</span><span style=\"font-size:18px\"> March demonstrates the ideal mix of strong weekday performance and peak hourly engagement. To improve views overall, replicate March’s programming and promotional strategies across other months, while strategically boosting weaker days and evening slots. This ensures sustained growth and smoother distribution of viewership throughout the year.</span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 12,
+            "width": 5,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "c00dae90",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size:18px\">**📊 HOURLY TRENDS**</span></span>\n",
+                "\n",
+                "<span style=\"color: #00A972;font-size: 18px;\">**Peak Hours:&#32;**</span><span style=\"color: #00A972;font-size: 18px;\"> </span><span style=\"font-size: 18px;\">The strongest engagement happens between 15:00–17:00, with the absolute peak at 16:00 (545 views).</span>\n",
+                "\n",
+                "<span style=\"color: #FFAB00;font-size: 18px;\">**Afternoon Build-Up:</span><span style=\"font-size: 18px;\">&#32;**</span><span style=\"font-size: 18px;\"> Views steadily rise from late morning (around 10:00) and climb into the afternoon peak.</span>\n",
+                "\n",
+                "<span style=\"color: #FF3621;font-size: 18px;\">Evening Decline: </span><span style=\"font-size: 18px;\">After 17:00, views gradually taper off, though they remain relatively strong until 23:00 (314 views).</span>\n",
+                "\n",
+                "<span style=\"color: #FF3621;font-size: 18px;\">**Low Hours:**</span><span style=\"font-size: 18px;\"> Early morning (0–5 AM) has minimal activity, with fewer than 50 views at 4–5 AM.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**Maximize Afternoon Peaks (15:00–17:00)**</span></span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Schedule flagship shows, premieres, or live events during these hours.</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Sell premium ad slots here to capitalize on the highest engagement.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**Strengthen Evening Retention (18:00–23:00)**</span></span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Introduce family-friendly or entertainment-heavy programming to keep audiences tuned in after the afternoon peak.</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Use interactive formats (polls, live chats, social media tie-ins) to sustain engagement.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**Build Morning Momentum (6:00–9:00)**</span></span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Offer news, kids’ shows, or quick entertainment formats to capture early risers.</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Promote “morning highlights” or recap segments to increase relevance.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**Use Overnight Hours (0–5 AM) Strategically**</span></span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Fill these slots with replays, highlights, or niche content (e.g., music blocks, international news).</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Encourage catch-up/on-demand viewing for audiences who miss prime-time shows.</span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 5,
+            "y": 12,
+            "width": 7,
+            "height": 9
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "71e92e99",
+      "displayName": "DISTRIBUTION ANALYSIS",
+      "layout": [
+        {
+          "widget": {
+            "name": "7b6a7abe",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**📊 Insights**</span></span>\n",
+                "<p>&nbsp;</p>\n",
+                "\n",
+                "<span style=\"font-size:18px;color:#00A972\">**Majority Audience:**</span><span style=\"font-size:18px\"> Black viewers make up the largest share at 44.55%, representing nearly half of the total audience.</span>\n",
+                "\n",
+                "<span style=\"font-size:18px;color:#FFAB00\">**Secondary Segments:**</span><span style=\"font-size:18px\"> Indian/Asian (17.03%) and Coloured (16.43%) audiences form strong mid-tier segments, together accounting for one-third of the viewership.</span>\n",
+                "\n",
+                "<span style=\"font-size:18px;color:#FF3621\">**Smaller Segments:**</span><span style=\"font-size:18px\"> White viewers (11.57%) and Unknown (9.22%) represent smaller but still notable portions of the audience.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**Content Strategy**</span></span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Black Audience (44.55%):**</span><span style=\"font-size:18px\"> Prioritize culturally resonant programming, local dramas, music shows, and sports coverage that align with community interests.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Indian/Asian & Coloured Audiences (33% combined):&#32;**</span><span style=\"font-size:18px\"> </span><span style=\"font-size:18px\">Introduce diverse entertainment options such as Bollywood films, regional music, and lifestyle shows to strengthen engagement.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**White Audience (11.57%):**</span><span style=\"font-size:18px\"> Maintain international news, lifestyle, and family-friendly programming to retain this segment.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**Marketing & Advertising**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Targeted Campaigns:&#32;**</span><span style=\"font-size:18px\"> </span><span style=\"font-size:18px\">Use demographic-specific advertising to maximize relevance (e.g., culturally themed promotions for majority groups, niche campaigns for smaller segments).\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">Cross-Segment Appeal: Highlight universal content like sports, reality shows, and family programming that cut across demographics.\r</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**Growth Opportunities**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Unknown Segment (9.22%):**</span><span style=\"font-size:18px\"> Investigate why this group is unclassified—could be due to incomplete data capture. Improving audience profiling will sharpen targeting strategies.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">Inclusive Programming: Ensure representation across all groups to avoid alienation and broaden appeal.\r</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**Business Strategy**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Advertiser Packages:**</span><span style=\"font-size:18px\"> Offer advertisers demographic-specific bundles (e.g., campaigns targeting Black audiences for mass reach, or Indian/Asian segments for niche cultural products).\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Data Enrichment:&#32;**</span><span style=\"font-size:18px\"> </span><span style=\"font-size:18px\">Enhance audience analytics to reduce the “Unknown” category and improve precision in programming and ad sales.\r</span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 9,
+            "width": 6,
+            "height": 12
+          }
+        },
+        {
+          "widget": {
+            "name": "f16ecec6",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 24px;\">**DISTRIBUTION ANALYSIS**</span></span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "51ef4626",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "73efae56",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    },
+                    {
+                      "name": "Race",
+                      "expression": "`Race`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Distribution By Race",
+                "headerAlignment": "center"
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "axis": {
+                    "title": "Views%"
+                  }
+                },
+                "color": {
+                  "fieldName": "Race",
+                  "legend": {
+                    "position": "top"
+                  },
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": true
+                },
+                "extra": [
+                  {
+                    "fieldName": "count(*)"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 6,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "10dcce00",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "b9ae2a20",
+                  "fields": [
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    },
+                    {
+                      "name": "Gender",
+                      "expression": "`Gender`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Distribution By Gender",
+                "headerAlignment": "center"
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "count(*)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "axis": {
+                    "title": "Views%"
+                  }
+                },
+                "color": {
+                  "fieldName": "Gender",
+                  "legend": {
+                    "position": "top"
+                  },
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "Unknown",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 6
+                        }
+                      },
+                      {
+                        "value": "Female",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 2
+                        }
+                      },
+                      {
+                        "value": "Male",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 1
+                        }
+                      }
+                    ]
+                  }
+                },
+                "label": {
+                  "show": true,
+                  "text": {
+                    "fieldName": "count(*)"
+                  }
+                },
+                "extra": [
+                  {
+                    "fieldName": "count(*)"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 1,
+            "width": 6,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "9059933e",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**📊 Insights**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "<p>&nbsp;</p>\n",
+                "\n",
+                "<span style=\"font-size:18px;color:#00A972\">**Male Dominance</span><span style=\"font-size:18px\">:**</span><span style=\"font-size:18px\"> Male viewers account for 7.29K views, which is overwhelmingly the largest segment. This indicates that programming is strongly resonating with male audiences.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px;color:#FFAB00\">Female Segment:</span><span style=\"font-size:18px\"> Female viewers</span><span style=\"font-size:18px\"> account for 827 views, a much smaller share than </span><span style=\"font-size:18px\">males. This suggests either limited female-targeted content or weaker engagement strategies for this demographic.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px;color:#FF3621\">Unknown Segment:</span><span style=\"font-size:18px\"> The 196 views (2.36%) classified as “Unknown” highlight gaps in audience profiling. This could be due to incomplete data capture, unregistered viewers, or technical limitations in tracking.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**🎯Strategy**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**Strengthen Female Engagement**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">Introduce more female-oriented programming (e.g., lifestyle shows, dramas, talk shows, reality TV).\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">Run targeted marketing campaigns aimed at female audiences, highlighting relatable content.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">Collaborate with female influencers or personalities to promote shows and build trust.\r</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**Optimize Male Audience Retention**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">Continue investing in sports, action, and entertainment genres that drive male viewership.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">Use male-heavy segments as anchor slots to cross-promote other genres and broaden reach.\r</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**Address Unknown Segment (2.36%)**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Data Enrichment:&#32;**</span><span style=\"font-size:18px\"> </span><span style=\"font-size:18px\">Improve audience profiling systems to reduce “Unknown” classification.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Survey & Feedback:&#32;**</span><span style=\"font-size:18px\"> </span><span style=\"font-size:18px\">Encourage viewers to register, share preferences, or participate in polls to capture missing demographic data.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Technical Audit:**</span><span style=\"font-size:18px\"> We need to fix our tracking systems as they are failing to classify certain viewers correctly.\r</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size:18px\">**Business & Advertising Strategy**</span><span style=\"font-size:18px\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Advertisers:**</span><span style=\"font-size:18px\"> Sell premium slots around male-heavy content but also highlight opportunities to reach underrepresented female audiences.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Balanced Packages:**</span><span style=\"font-size:18px\"> Offer advertisers bundled campaigns that target both male and female segments, ensuring inclusivity.\r</span>\n",
+                "\n",
+                "<span style=\"font-size:18px\">**Growth Potential:**</span><span style=\"font-size:18px\"> Reducing the “Unknown” category will sharpen targeting, improve ROI, and unlock new advertiser confidence.\r</span><span style=\"font-size:18px\">\r</span>\r\n",
+                "<p>&nbsp;</p>\n"
+              ]
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 9,
+            "width": 6,
+            "height": 12
+          }
+        },
+        {
+          "widget": {
+            "name": "quarter",
+            "queries": [
+              {
+                "name": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Quarter",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Quarter",
+                      "expression": "`Quarter`"
+                    },
+                    {
+                      "name": "Quarter_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "QUARTER"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Quarter",
+                    "queryName": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Quarter"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 3,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "province",
+            "queries": [
+              {
+                "name": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Province",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Province",
+                      "expression": "`Province`"
+                    },
+                    {
+                      "name": "Province_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "PROVINCE"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Province",
+                    "queryName": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Province"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 0,
+            "width": 3,
+            "height": 1
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    },
+    {
+      "name": "dfb64ff5",
+      "displayName": "CATEGORICAL ANALYSIS",
+      "layout": [
+        {
+          "widget": {
+            "name": "2d2494f4",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## <span style=\"text-align:center;display:block\">CATEGORICAL ANALYSIS</span>"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 6,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "province",
+            "queries": [
+              {
+                "name": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Province",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Province",
+                      "expression": "`Province`"
+                    },
+                    {
+                      "name": "Province_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "PROVINCE"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Province",
+                    "queryName": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Province"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 0,
+            "width": 3,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "season",
+            "queries": [
+              {
+                "name": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Season",
+                "query": {
+                  "datasetName": "0bae0491",
+                  "fields": [
+                    {
+                      "name": "Season",
+                      "expression": "`Season`"
+                    },
+                    {
+                      "name": "Season_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "SEASON"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "Season",
+                    "queryName": "dashboards/01f137efab531649ad85a12e602899c1/datasets/01f137f040ab109a86d14cde1d72055b_Season"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 0,
+            "width": 3,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "76949df8",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "b8edc213",
+                  "fields": [
+                    {
+                      "name": "Social Media Handle",
+                      "expression": "`Social Media Handle`"
+                    },
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "TOP 10 SOCIAL HANDLES BY VIEWS",
+                "headerAlignment": "center"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "Social Media Handle",
+                  "scale": {
+                    "type": "categorical",
+                    "categorySize": {
+                      "type": "number-of-categories",
+                      "number": 10
+                    },
+                    "sort": {
+                      "by": "custom-order",
+                      "orderedValues": [
+                        "@Randy 39",
+                        "Unknown",
+                        "@Jacinto 25",
+                        "@Lucas 23",
+                        "@Charlie 36",
+                        "@Abel 18",
+                        "@Emerson 24",
+                        "@Lane 11",
+                        "@Michel 20",
+                        "@Hyman 8",
+                        "@Hugh1",
+                        "@Claud 34",
+                        "@Raymundo 43",
+                        "@Shane 2",
+                        "@Chas 35",
+                        "@Dee 21",
+                        "@Cory 10",
+                        "@Donald 22",
+                        "@Yong 48",
+                        "@Markus 19",
+                        "@Len 44",
+                        "@Brendan 45",
+                        "@Filiberto 4",
+                        "@Art 40",
+                        "@Bernardo 32",
+                        "@Robby 16",
+                        "@Kip 14",
+                        "@Kyle 6",
+                        "@Stacy 27",
+                        "@Garry 28",
+                        "@Valentine 47",
+                        "@Efren 13",
+                        "@Carter 3",
+                        "@Cody 12",
+                        "@Wilburn 30",
+                        "@Jared 50",
+                        "@Irving 5",
+                        "@Bret 31",
+                        "@Loyd 49",
+                        "@Royal 17",
+                        "@Eli 29",
+                        "@Samuel 26",
+                        "@Romeo 37",
+                        "@Stephen 15",
+                        "@Stefan 46",
+                        "@Lloyd 7",
+                        "@Hollis 38",
+                        "@Earl 42",
+                        "@Wilton 41",
+                        "@Dion 33",
+                        "@Haywood 9",
+                        "@Torrie 14",
+                        "@Alecia 34",
+                        "@Rebekah 9",
+                        "@Rebekah 32",
+                        "@Anette 23",
+                        "@Minerva 37",
+                        "@Rebecka 17",
+                        "@Rebekah 22",
+                        "@Gretta 27",
+                        "@Katharina 25",
+                        "@Rebecka 11",
+                        "@Eula 49",
+                        "@Winona 7",
+                        "@Luann 46",
+                        "@Lillie 43",
+                        "@Briana 15",
+                        "@Blanca 40",
+                        "@Yolonda 32",
+                        "@Roxana 36",
+                        "@Sharri 21",
+                        "@Adela 13",
+                        "@Winona 3",
+                        "@Loris 9",
+                        "@Roxana 8",
+                        "@Gretta 33",
+                        "@Cordie 6",
+                        "@Dia 8",
+                        "@Rebecka 24",
+                        "@Malika 28",
+                        "@Irmgard 9",
+                        "@Lesli 9",
+                        "@Minerva 32",
+                        "@Shandra 8",
+                        "@Desirae 40",
+                        "@Anette 42",
+                        "@Zetta 12",
+                        "@Luanna 43",
+                        "@Adela 39",
+                        "@Nakita 35",
+                        "@Katharina 41",
+                        "@Lillian 23",
+                        "@Minerva 29",
+                        "@Lillian 3",
+                        "@Felipa 17",
+                        "@Earline 35",
+                        "@Anette 14",
+                        "@Shelley 23",
+                        "@Carlota 24",
+                        "@Carlota 20",
+                        "@Earline 50",
+                        "@Malika 40",
+                        "@Gretta 8",
+                        "@Desirae 20",
+                        "@Seema 26",
+                        "@Briana 50",
+                        "@Loris 16",
+                        "@Shandra 26",
+                        "@Anette 13",
+                        "@Shandra 24",
+                        "@Earline 11",
+                        "@Eula 43",
+                        "@Earline 28",
+                        "@Carlota 50",
+                        "@Shelley 22",
+                        "@Katharina 13",
+                        "@Dia 5",
+                        "@Lillian 43",
+                        "@Desirae 17",
+                        "@Krysta 28",
+                        "@Shandra 19",
+                        "@Malika 13",
+                        "@Yolonda 35",
+                        "@Lillie 36",
+                        "@Trudie 26",
+                        "@Winona 18",
+                        "@Lillian 1",
+                        "@Krysta 41",
+                        "@Alecia 5",
+                        "@Anette 37",
+                        "@Irmgard 30",
+                        "@Nakita 28",
+                        "@Shandra 28",
+                        "@Katharina 1",
+                        "@Luanna 40",
+                        "@Yolonda 29",
+                        "@Emilie 1",
+                        "@Mellie 26",
+                        "@Nubia 19",
+                        "@Sharri 16",
+                        "@Alecia 41",
+                        "@Shandra 41",
+                        "@Reagan 8",
+                        "@Tiffani 9",
+                        "@Irmgard 12",
+                        "@Blanca 48",
+                        "@Emilie 26",
+                        "@Trudie 30",
+                        "@Krysta 37",
+                        "@Seema 41",
+                        "@Shelley 47",
+                        "@Shelley 38",
+                        "@Earline 37",
+                        "@Nakita 14",
+                        "@Katharina 4",
+                        "@Earline 7",
+                        "@Eula 37",
+                        "@Minerva 7",
+                        "@Iva 8",
+                        "@Torrie 7",
+                        "@Luanna 11",
+                        "@Lillie 11",
+                        "@Luann 23",
+                        "@Carlota 6",
+                        "@Luann 5",
+                        "@Shelley 41",
+                        "@Teresia 20",
+                        "@Sharri 46",
+                        "@Roxane 30",
+                        "@Teresia 50",
+                        "@Krysta 8",
+                        "@Lillian 10",
+                        "@Malika 3",
+                        "@Williemae 24",
+                        "@Alecia 15",
+                        "@Reagan 50",
+                        "@Gretta 48",
+                        "@Adela 36",
+                        "@Blanca 1",
+                        "@Iva 27",
+                        "@Katharina 21",
+                        "@Rebecka 23",
+                        "@Rebecka 15",
+                        "@Eula 30",
+                        "@Yolonda 47",
+                        "@Luanna 27",
+                        "@Alecia 23",
+                        "@Torrie 24",
+                        "@Minerva 17",
+                        "@Lesli 25",
+                        "@Earline 2",
+                        "@Williemae 33",
+                        "@Mellie 3",
+                        "@Desirae 8",
+                        "@Rebekah 19",
+                        "@Emilie 34",
+                        "@Torrie 13",
+                        "@Winona 11",
+                        "@Reagan 32",
+                        "@Yolonda 41",
+                        "@Williemae 49",
+                        "@Tiffani 21",
+                        "@Desirae 26",
+                        "@Tiffani 25",
+                        "@Katharina 42",
+                        "@Lesli 20",
+                        "@Bess 20",
+                        "@Luanna 50",
+                        "@Epifania 40",
+                        "@Luann 40",
+                        "@Krysta 17",
+                        "@Krysta 43",
+                        "@Lillian 36",
+                        "@Alissa 16",
+                        "@Desirae 3",
+                        "@Iva 43",
+                        "@Teresia 14",
+                        "@Malika 46",
+                        "@Zetta 41",
+                        "@Cordie 3",
+                        "@Williemae 13",
+                        "@Felipa 28",
+                        "@Minerva 5",
+                        "@Desirae 45",
+                        "@Nubia 4",
+                        "@Reagan 4",
+                        "@Yolonda 20",
+                        "@Epifania 35",
+                        "@Alecia 16",
+                        "@Shelley 35",
+                        "@Dia 25",
+                        "@Lillie 46",
+                        "@Yolonda 13",
+                        "@Mellie 39",
+                        "@Irmgard 41",
+                        "@Katharina 26",
+                        "@Mellie 41",
+                        "@Williemae 48",
+                        "@Winona 14",
+                        "@Mellie 1",
+                        "@Malika 15",
+                        "@Nubia 34",
+                        "@Briana 1",
+                        "@Alissa 44",
+                        "@Shandra 34",
+                        "@Nubia 3",
+                        "@Irmgard 1",
+                        "@Teresia 27",
+                        "@Meghann 14",
+                        "@Lillian 44",
+                        "@Nubia 1",
+                        "@Lillie 50",
+                        "@Teresia 47",
+                        "@Torrie 9",
+                        "@Trudie 31",
+                        "@Epifania 41",
+                        "@Earline 22",
+                        "@Luanna 26",
+                        "@Carlota 32",
+                        "@Adela 20",
+                        "@Roxana 49",
+                        "@Dia 49",
+                        "@Yolonda 25",
+                        "@Luanna 23",
+                        "@Epifania 42",
+                        "@Winona 46",
+                        "@Williemae 42",
+                        "@Felipa 43",
+                        "@Yolonda 42",
+                        "@Eula 2",
+                        "@Roxane 11",
+                        "@Adela 10",
+                        "@Malika 41",
+                        "@Irmgard 20",
+                        "@Dia 1",
+                        "@Lillian 20",
+                        "@Meghann 46",
+                        "@Emilie 28",
+                        "@Briana 33",
+                        "@Sharri 18",
+                        "@Tiffani 34",
+                        "@Blanca 9",
+                        "@Carlota 44",
+                        "@Cordie 10",
+                        "@Lesli 38",
+                        "@Loris 2",
+                        "@Meghann 19",
+                        "@Malika 20",
+                        "@Katharina 50",
+                        "@Bess 1",
+                        "@Winona 32",
+                        "@Zetta 21",
+                        "@Carlota 49",
+                        "@Trudie 38",
+                        "@Epifania 4",
+                        "@Mellie 50",
+                        "@Epifania 48",
+                        "@Krysta 13",
+                        "@Shelley 36",
+                        "@Winona 2",
+                        "@Gretta 50",
+                        "@Krysta 22",
+                        "@Mellie 14",
+                        "@Krysta 45",
+                        "@Krysta 20",
+                        "@Iva 38",
+                        "@Felipa 1",
+                        "@Trudie 5",
+                        "@Torrie 26",
+                        "@Irmgard 45",
+                        "@Bess 6",
+                        "@Trudie 29",
+                        "@Dia 32",
+                        "@Trudie 6",
+                        "@Cordie 13",
+                        "@Alecia 33",
+                        "@Emilie 32",
+                        "@Eula 29",
+                        "@Tiffani 46",
+                        "@Minerva 23",
+                        "@Shandra 32",
+                        "@Alecia 42",
+                        "@Alissa 2",
+                        "@Mellie 9",
+                        "@Roxane 19",
+                        "@Emilie 44",
+                        "@Bess 15",
+                        "@Lesli 46",
+                        "@Tiffani 41",
+                        "@Shelley 30",
+                        "@Anette 31",
+                        "@Luann 12",
+                        "@Roxana 50",
+                        "@Irmgard 42",
+                        "@Rebecka 46",
+                        "@Loris 42",
+                        "@Eula 31",
+                        "@Luanna 39",
+                        "@Alissa 4",
+                        "@Eula 17",
+                        "@Shelley 25",
+                        "@Zetta 27",
+                        "@Williemae 25",
+                        "@Nakita 50",
+                        "@Lesli 18",
+                        "@Earline 9",
+                        "@Anette 28",
+                        "@Blanca 19",
+                        "@Gretta 37",
+                        "@Briana 47",
+                        "@Shelley 7",
+                        "@Felipa 24",
+                        "@Krysta 35",
+                        "@Roxana 24",
+                        "@Briana 40",
+                        "@Zetta 29",
+                        "@Rebekah 17",
+                        "@Anette 1",
+                        "@Seema 37",
+                        "@Meghann 5",
+                        "@Alecia 49",
+                        "@Adela 41",
+                        "@Alecia 40",
+                        "@Blanca 33",
+                        "@Minerva 20",
+                        "@Eula 39",
+                        "@Nubia 40",
+                        "@Tiffani 38",
+                        "@Anette 15",
+                        "@Desirae 21",
+                        "@Lillie 27",
+                        "@Loris 10",
+                        "@Roxane 6",
+                        "@Lesli 28",
+                        "@Krysta 18",
+                        "@Dia 33",
+                        "@Winona 41",
+                        "@Rebekah 13",
+                        "@Alecia 14",
+                        "@Eula 11",
+                        "@Emilie 23",
+                        "@Iva 21",
+                        "@Lesli 30",
+                        "@Luann 7",
+                        "@Nakita 18",
+                        "@Williemae 41",
+                        "@Alissa 14",
+                        "@Iva 12",
+                        "@Sharri 3",
+                        "@Earline 32",
+                        "@Lillian 22",
+                        "@Torrie 8",
+                        "@Gretta 43",
+                        "@Reagan 30",
+                        "@Reagan 16",
+                        "@Roxane 17",
+                        "@Roxane 18",
+                        "@Desirae 29",
+                        "@Katharina 46",
+                        "@Luanna 19",
+                        "@Teresia 29",
+                        "@Lesli 34",
+                        "@Emilie 50",
+                        "@Katharina 20",
+                        "@Anette 24",
+                        "@Luanna 25",
+                        "@Seema 46",
+                        "@Roxane 28",
+                        "@Rebekah 43",
+                        "@Epifania 23",
+                        "@Bess 5",
+                        "@Meghann 22",
+                        "@Nakita 13",
+                        "@Anette 34",
+                        "@Carlota 27",
+                        "@Dia 47",
+                        "@Winona 48",
+                        "@Cordie 34",
+                        "@Tiffani 43"
+                      ]
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "count(*)",
+                  "axis": {
+                    "title": "VIEWS"
+                  },
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 6,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "15473c96",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5fae0eb7",
+                  "fields": [
+                    {
+                      "name": "Channel2",
+                      "expression": "`Channel2`"
+                    },
+                    {
+                      "name": "count(*)",
+                      "expression": "COUNT(`*`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "TOP 10 CHANNELS BY VIEWS",
+                "headerAlignment": "center"
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "Channel2",
+                  "scale": {
+                    "type": "categorical",
+                    "categorySize": {
+                      "type": "number-of-categories",
+                      "number": 10
+                    },
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "count(*)",
+                  "displayName": "VIEWS",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 1,
+            "width": 6,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "2322e044",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**📊 Social Handle Insights**</span>\r</span>\n",
+                "\n",
+                "<span style=\"color: #00A972;font-size: 18px;\">Top Performer:</span><span style=\"font-size: 18px;\"> @Remi\\_d39 leads with 211 views, showing strong individual influence.\r</span>\n",
+                "\n",
+                "<span style=\"color: #FFAB00;font-size: 18px;\">Close Competition: </span><span style=\"font-size: 18px;\">Several handles (e.g., @valerio25, @Luca23, @charlie36) are clustered around 180–190 views, indicating a competitive mid-tier influencer base.\r</span>\n",
+                "\n",
+                "<span style=\"color: #FF3621;font-size: 18px;\">Unknown (196 views):</span><span style=\"font-size: 18px;\"> A notable portion of views comes from unidentified sources, suggesting gaps in tracking or unregistered users.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\">**🎯<span style=\"font-size: 18px;\">&#32;Strategy**</span><span style=\"font-size: 18px;\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">**Strengthen Social Handle Engagement**</span><span style=\"font-size: 18px;\">\r</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">**Leverage Top Influencers:**</span><span style=\"font-size: 18px;\"> Collaborate with @Remi\\_d39 and other high-performing handles for promotions, live interactions, and cross-platform campaigns.\r</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">**Grow Mid-Tier Handles:**</span><span style=\"font-size: 18px;\"> Support rising handles with co-branded content to push them into higher viewership brackets.\r</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Resolve </span><span style=\"font-size: 18px;\">**“Unknown”**</span><span style=\"font-size: 18px;\"> Segment: Improve data capture and encourage user registration to reduce unidentified views, unlocking sharper targeting</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**Executive-Level Clarity&#13;**</span><br><span style=\"font-size: 18px;\">Maintain momentum by anchoring growth in sports content and top influencers, while strategically expanding music, lifestyle, and family programming. At the same time, reduce unknown viewership through better profiling to unlock sharper targeting and advertiser confidence. This dual approach ensures both sustained engagement and scalable growth.</span>\r</span>\n",
+                "<p>&nbsp;</p>\n",
+                "\n",
+                "<p>&nbsp;</p>\n"
+              ]
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 9,
+            "width": 6,
+            "height": 10
+          }
+        },
+        {
+          "widget": {
+            "name": "d0f178e9",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**📊 Channel Insights**</span></span>\n",
+                "\n",
+                "<span style=\"color: #00A972;font-size: 18px;\">**Sports Dominance:</span><span style=\"font-size: 18px;\">&#32;** </span><span style=\"font-size: 18px;\">Supersport Live Events (1.32K) and ICC Cricket World Cup 2011 (1.17K) are clear leaders, confirming sports as the strongest driver of engagement.\r</span>\n",
+                "\n",
+                "<span style=\"color: #FFAB00;font-size: 18px;\">**Music & Lifestyle Appeal:**</span><span style=\"font-size: 18px;\"> Channel O (932) and Trace TV (801) show strong traction, highlighting demand for entertainment and cultural content.\r</span>\n",
+                "\n",
+                "<span style=\"color: #FF3621;font-size: 18px;\">**Family & Kids Content:**</span><span style=\"color: #FF3621;font-size: 18px;\"> </span><span style=\"font-size: 18px;\">Cartoon Network (675) and Boomerang (585) demonstrate steady demand for children’s programming.\r</span>\n",
+                "\n",
+                "<span style=\"color: #FF3621;font-size: 18px;\">**News & International:**</span><span style=\"color: #FF3621;font-size: 18px;\"> </span><span style=\"font-size: 18px;\">CNN (410) and E! Entertainment (312) trail but serve niche audiences.</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**Consolidate Channel Strengths**</span><span style=\"font-size: 18px;\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Sports as Anchor Content: Continue investing in live sports rights and coverage, as they are the biggest audience magnets.\r</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">**Diversify with Music & Lifestyle:**</span><span style=\"font-size: 18px;\"> Expand partnerships with music and lifestyle channels to balance audience appeal.\r</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">**Family Programming:**</span><span style=\"font-size: 18px;\"> Strengthen kids’ content offerings to capture household audiences and daytime viewership.\r</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**Cross-Promotion Strategy**</span><span style=\"font-size: 18px;\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Use sports broadcasts (high-traffic slots) to cross-promote other genres like music, lifestyle, and kids’ programming.\r</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">Encourage influencers to promote channel highlights, bridging social media audiences with TV viewership.\r</span>\n",
+                "\n",
+                "<span style=\"text-align:center;display:block;\"><span style=\"font-size: 18px;\">**Advertising & Business Growth**</span><span style=\"font-size: 18px;\">\r</span></span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">**Premium Slots:**</span><span style=\"font-size: 18px;\"> Sell prime ad slots around sports and music content.\r</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">**Segmented Packages:**</span><span style=\"font-size: 18px;\"> Offer advertisers demographic-specific bundles (e.g., family-focused ads on Cartoon Network, lifestyle brands on Trace TV).\r</span>\n",
+                "\n",
+                "<span style=\"font-size: 18px;\">**Data-Driven Campaigns:**</span><span style=\"font-size: 18px;\"> Use improved audience profiling to pitch sharper, ROI-focused campaigns to advertisers.</span>\r\n",
+                "<p>&nbsp;</p>\n"
+              ]
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 9,
+            "width": 6,
+            "height": 10
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
