@@ -27,7 +27,7 @@ Every notebook and script here reflects my growing understanding of data analysi
 - **Bivariate analysis**: Scatter plots, grouped bar charts, correlation analysis
 - **Multivariate analysis**: Pair plots, heatmaps, facet grids
 
-### 3. Visualizations (What I'm Practicing)
+### 3. Visualizations on Databricks
 | Visualization | Purpose | Libraries Used |
 |---------------|---------|----------------|
 | Histograms | Distribution of numerical data | Matplotlib, Seaborn |
