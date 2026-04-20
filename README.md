@@ -212,7 +212,7 @@ Every notebook and script here reflects my growing understanding of data analysi
 
 | Tool/Library | Purpose |
 |--------------|---------|
-| **Databricks** | Cloud-based data platform |
+| **Databricks** | Cloud-based data & visualization platform |
 | **Python 3.x** | Core programming language |
 | **Pandas** | Data manipulation & analysis |
 | **NumPy** | Numerical operations |
