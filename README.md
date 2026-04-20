@@ -9,7 +9,7 @@ This project is part of my **Python learning journey** where I explore **Explora
 This repository documents what I've learned about:
 - Loading and inspecting datasets using **Pandas**
 - Cleaning messy data (handling missing values, duplicates, outliers)
-- Creating meaningful visualizations with **Matplotlib** & **Seaborn**
+- Creating meaningful visualizations with **Matplotlib**,**Seaborn** & **Dashboard**
 - Interpreting plots to find patterns and insights
 
 Every notebook and script here reflects my growing understanding of data analysis workflows.
